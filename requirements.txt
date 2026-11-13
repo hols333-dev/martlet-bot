@@ -1,0 +1,5 @@
+pyTelegramBotAPI
+Pillow
+Flask
+gunicorn
+requests
