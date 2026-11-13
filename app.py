@@ -121,10 +121,14 @@ def handle_text(message):
         bot.reply_to(message, f"Сталася помилка: {e}")
 
 if __name__ == "__main__":
-    # Налаштування вебхука при стартові
     RENDER_URL = os.environ.get("RENDER_EXTERNAL_URL")
+    print(f"Знайдено URL від Render: {RENDER_URL}")
+    
     if RENDER_URL:
         bot.remove_webhook()
         bot.set_webhook(url=f"{RENDER_URL}/{TOKEN}")
-    
+        print(f"Вебхук успішно встановлено на: {RENDER_URL}/{TOKEN}")
+    else:
+        print("ПОМИЛКА: RENDER_EXTERNAL_URL не знайдено!")
+        
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
