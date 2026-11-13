@@ -4,7 +4,7 @@ from flask import Flask, request
 from PIL import Image, ImageDraw, ImageFont
 import telebot
 
-TOKEN = "8635048670:AAFb-ZAdbB2BpwvaURWMbgUKNW2NpM-h5S8"
+TOKEN = "8635048670:AAEpm23iblKoMrVr5rLTIvyGAYCGgrEBPMQ"
 bot = telebot.TeleBot(TOKEN, threaded=False)
 
 app = Flask(__name__)
